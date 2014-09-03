@@ -34,3 +34,7 @@ The robot is written in nodejs, and requires the irc module
 ## Where to Get Help
 
 Please visit #bitmark on freenode IRC
+
+#License
+
+**Code released under [the MIT license](https://github.com/melvincarvalho/markbot/blob/master/LICENSE).**
