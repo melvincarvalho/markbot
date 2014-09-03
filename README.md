@@ -3,9 +3,9 @@
 
 *A robot that rewards good behaviour.*
 
-You've been scratching your head, trying to solve a problem all day and going no where fast.  Suddenly, out of nowhere, someone on IRC sends you a link for exactly the thing you've been searching for.  Wouldn't it be nice to reward that person, with something more than just a few words of thanks?  Well now you can!
+You've been scratching your head, trying to solve a problem all day and going nowhere fast.  Suddenly, out of nowhere, someone on IRC sends you a link for exactly the thing you've been searching for.  Wouldn't it be nice to reward that person, with something more than just a few words of thanks?  Well now you can!
 
-Currently in early prototype, the aim of of mark bot is to mark great contributions with appropriaterewards, using crypto currencies.
+Currently in early prototype, the aim of of mark bot is to mark great contributions with appropriate rewards, using crypto currencies.
 
 The first currency supported is the [Bitmark](https://github.com/project-bitmark/marking/wiki/).
 
