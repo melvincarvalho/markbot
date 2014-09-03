@@ -25,6 +25,9 @@ The robot is written in nodejs, and requires the irc module
 
     npm install irc
     
+    npm install bitcore
+
+If using alternative currencies download bitcore and put it in your local directory.    
 
 ## To Run
 

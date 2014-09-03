@@ -1,11 +1,17 @@
 // Requires
 var irc  = require('irc');
+var bitcore  = require('./bitcore/');
 
 // Init
+var Address = bitcore.Address;
 var botName = 'markbot';
 var channel = '#bitmark';
 var duration = 30000;
-var joinMessage = 'Greetings, I am markbot.  Just popping in briefly, to look around.';
+
+var amount = 2;
+var currency = '₥';
+
+var joinMessage = 'Greetings, I am markbot.  I have ' + amount + '' + currency + ' to give away to the first person to post a valid account address!';
 var partMessage = "So long, until next time.  I'll be back!";
 
 
@@ -31,11 +37,18 @@ bot.addListener("join", function(channel, nick, message) {
 
 // Listen for any messages
 bot.addListener("message", function(from, to, text, message) {
+  var m = message.args[1];
+  var a = new Address(m);
+  console.log(m + ' ' +a.isValid()); 
   console.log(message);
+  if (a.isValid()) {
+    var successMessage = 'Congratulations, we have a winner!  ' + amount + '' + currency + ' will be sent to : ' + m;
+    bot.say(config.channels[0], successMessage);
+    part();
+  }
 });
 
 // part
-setTimeout(part, duration);
 function part() {
   bot.say(config.channels[0], partMessage);
   bot.part(config.channels[0], partMessage, function(){ 
